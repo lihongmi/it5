@@ -35,7 +35,7 @@ ffff
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 
-{% dplayer "url=https://yunqivedio.alicdn.com/2017yq/v2/0x0/96d79d3f5400514a6883869399708e11/96d79d3f5400514a6883869399708e11.m3u8"  %}
+{% dplayer "url=https://yunqivedio.alicdn.com/2017yq/v2/0x0/96d79d3f5400514a6883869399708e11/96d79d3f5400514a6883869399708e11.m3u8" "preload=false"  %}
 
 <!-- {% dplayer "url=http://192.168.1.2:8000/duixiang.m3u8" "autoplay=false" %} -->
 
