@@ -8,6 +8,42 @@ tags:
 categories:
     - node
 ---
+集群clusterfork运行Node.js
+```
+var cluster = require('cluster');
+ 
+if (cluster.isMaster) {
+  var numCPUs = require('os').cpus().length;
+ 
+  for (var i = 0; i < numCPUs; i++) {
+    cluster.fork();
+  }
+ 
+  cluster.on('exit', function() {
+    console.log('A worker process died, restarting...');
+    cluster.fork();
+  });
+} else {
+  var express = require('express');
+  var app = express();
+ 
+  app.get('/', function(req, res) {
+    res.send('Hello World!');
+  });
+ 
+  app.get('/explode', function(req, res) {
+    setTimeout(function() {
+      res.send(this.wont.go.over.well);
+    }, 1);
+  });
+ 
+  var server = app.listen(3000, function() {
+    console.log('Server started on port 3000');
+  });
+}
+```
+
+
 
 node 线程进程 进程操作
 
@@ -56,3 +92,10 @@ https://www.sohu.com/a/337868360_657169
 https://blog.csdn.net/azard5/article/details/85016412
 
 https://www.jb51.net/article/158538.htm
+
+
+
+Node 中有一些 IO 操作（DNS，FS）和一些 CPU 密集计算（Zlib，Crypto）会启用 Node 的线程池
+，而线程池默认大小为 4
+我们可以手动更改线程池默认大小：
+process.env.UV_THREADPOOL_SIZE = 64
