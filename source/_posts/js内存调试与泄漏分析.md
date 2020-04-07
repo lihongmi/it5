@@ -14,3 +14,6 @@ Chrome devtools提供了一种可以基于时间线的内存调试工具——Al
 蓝色的线条都代表当前进行了一些内存的分配，而灰色的线条代表GC已经成功将分配出去的内存回收了
 
 https://zhuanlan.zhihu.com/p/60849134
+
+
+https://blog.csdn.net/liuyaqi1993/article/details/79715433
