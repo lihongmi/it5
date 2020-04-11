@@ -20,5 +20,9 @@ categories:
 * readline
 * inquirer
 * shell.js
+* node-crawler
+* co
+* crypto
+* zlib
 
 

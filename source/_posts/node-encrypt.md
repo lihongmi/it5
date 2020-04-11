@@ -37,6 +37,29 @@ encryptedText = encrypt(plainText, publicKey); // 加密 plainText = decrypt(enc
 对称加密速度要快于非对称加密。
 非对称加密通常用于加密短文本，对称加密通常用于加密长文本。
 
+
+```
+//盐值
+const _key='sadfslekrtuew5iutoselgdtjiypoydse4ufhs.edtyo;s8te4arfeliawkfhtsie5tlfia;sefdshroiupeoutwyeli5gurse;ihf';
+
+//MD5加密
+function md5(str){
+  let obj=crypto.createHash('md5');
+
+  obj.update(str);
+
+  return obj.digest('hex');
+}
+
+//MD5盐值加密
+function md5_2(str){
+  return md5(md5(str)+_key);
+}
+
+
+```
+
+
 参考
 https://www.cnblogs.com/eret9616/p/9197968.html
 https://www.cnblogs.com/eret9616/p/9197927.html
