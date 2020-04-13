@@ -24,5 +24,10 @@ categories:
 * co
 * crypto
 * zlib
+* adm-zip
+* compressing
+* moment
+* dayjs
+* serve-index
 
 

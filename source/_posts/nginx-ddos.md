@@ -50,5 +50,13 @@ DDoS Deflate 通过netstat判断ip连接数，并使用iptables屏蔽
 CDN 例如：蓝讯 网宿 cloudflare 等，CDN针对DDOS的分布式特点，将流量引流分散，同时对网站又有加速作用，效果好，成本相对低。 
 总结一下：发动攻击易，防御难。七层好防，四层难防；小型能防，大型烧钱
 
+
+
+
+
+nginx超时重试机制及潜在的坑
+https://blog.csdn.net/flyfeifei66/article/details/82686002
+解决办法分布式锁
+
 参考
 https://www.cnblogs.com/azhqiang/p/10231490.html
