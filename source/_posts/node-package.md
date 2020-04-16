@@ -29,5 +29,12 @@ categories:
 * moment
 * dayjs
 * serve-index
+* npm-check
+* node-static
+* gm  调用GraphicsMagick工具
+* node-webp  cwebp 和 dwebp
+* ncc
+* jimp 截图
+* tribedb 分表分库数据访问中间件  https://github.com/lihongmi/node-TribeDB
 
 
